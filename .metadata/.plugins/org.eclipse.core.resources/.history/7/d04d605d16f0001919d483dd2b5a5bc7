@@ -1,0 +1,22 @@
+package rps;
+
+import java.util.Scanner;
+
+public class Game {
+	public static void main(String[] args) {
+		
+		RPS game = new RPS();
+		Scanner scan = new Scanner(System.in);
+		boolean play = true;
+		
+		
+/*		while (play == true) {
+*/			
+			String playerAction = scan.nextLine();
+			System.out.println(game.game(playerAction));
+			
+			
+		/*}*/
+		scan.close();
+	}
+}

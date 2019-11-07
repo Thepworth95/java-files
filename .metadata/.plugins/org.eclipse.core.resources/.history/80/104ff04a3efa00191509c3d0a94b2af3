@@ -1,0 +1,63 @@
+package shopingWebsite;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+import org.junit.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ShopingProdjectTest {
+
+	WebDriver driver;
+
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Admin/Desktop/Drivers/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+
+	@Test
+	public void test1() {
+		driver.get("http://automationpractice.com/index.php");
+		WebElement searchfor = driver.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]"));
+		searchfor.sendKeys("dress");
+		
+	/*	List<WebElement> wEs = driver.findElements(By.tagName("input"));
+		wEs = wEs.stream().filter(x -> x.getAttribute("ClassName").equals("search_query form-control ac_input")).collect(Collectors.toList());
+		wEs.sendKeys("dress");
+		*/
+		
+		
+		
+		//*[@id="search_query_top"]
+		
+	/*	
+		
+		WebElement createuserame = driver.findElement(By.xpath(""));
+		createuserame.sendKeys("dress");
+		WebElement createpassword = driver.findElement(By.xpath(""));
+		createpassword.sendKeys("notaweapon");
+		WebElement createsubmitdetails = driver.findElement(By.xpath(""));
+		createsubmitdetails.click();
+		WebElement loginpage = driver.findElement(By.xpath(""));
+		loginpage.click();
+		WebElement loginuserame = driver.findElement(By.xpath(""));
+		loginuserame.sendKeys("GoodTom");
+		WebElement loginpassword = driver.findElement(By.xpath(""));
+		loginpassword.sendKeys("notaweapon");
+		WebElement loginsubmitdetails = driver.findElement(By.xpath(""));
+		loginsubmitdetails.click();*/
+		assertEquals("", "**Successful Login**", driver.findElement(By.xpath("")).getText());
+	}
+
+	@After
+	public void destroy() {
+		driver.close();
+
+	}
+}

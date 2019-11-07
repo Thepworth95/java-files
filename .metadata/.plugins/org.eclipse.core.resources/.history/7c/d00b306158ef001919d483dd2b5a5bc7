@@ -1,0 +1,21 @@
+package library;
+
+public class Mags extends LibraryItem implements CheckIn, CheckOut {
+
+	public void checkOut() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void checkIn() {
+		// TODO Auto-generated method stub
+
+	}
+	public void checkOut() {
+		this.setCheckedOut(true);
+	}
+
+	public void checkIn() {
+		this.setCheckedOut(false);
+	}
+}

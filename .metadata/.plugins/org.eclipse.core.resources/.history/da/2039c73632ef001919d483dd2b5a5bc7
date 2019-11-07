@@ -1,0 +1,13 @@
+package Maths;
+
+public class DivideWithExceptions {
+	public void divide(double a, double b) throws AIsBiggerThanB {
+		if (a > b) {
+			throw new AIsBiggerThanB();
+
+		} else {
+			System.out.println(a / b);
+		}
+	}
+
+}

@@ -1,0 +1,21 @@
+package stringManipulation;
+
+public class Count {
+	public int count(String s) {
+
+		int a = 1;
+		if (s.substring(i - 1, i).equals(null)) {
+			a = 0;
+		} else {
+			for (int i = 1; i < s.length(); i++) {
+				if (s.substring(i - 1, i).equals(" ")) {
+					++a;
+				}
+			}
+		}
+
+		return s.length();
+
+	}
+
+}

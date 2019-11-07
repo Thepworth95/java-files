@@ -1,0 +1,12 @@
+package stringManipulation;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		Count lengthOfString = new Count();
+
+		System.out.println(lengthOfString.count("this is a string"));
+		System.out.println(lengthOfString.count("this is a longer string"));
+	}
+}

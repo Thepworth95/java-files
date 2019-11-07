@@ -1,0 +1,7 @@
+package stringManipulation;
+
+public class VertivalPrint {
+	public String vertical(String s) {
+		
+	}
+}

@@ -1,0 +1,20 @@
+package library;
+
+public class DailyMail extends Newspaper {
+
+	private String editor;
+
+	public DailyMail(int iD, String date, String location, String editor) {
+		super(iD, date, location);
+		this.editor = editor;
+	}
+
+	public String getEditor() {
+		return editor;
+	}
+
+	public void setEditor(String editor) {
+		this.editor = editor;
+	}
+
+}

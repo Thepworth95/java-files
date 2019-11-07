@@ -1,0 +1,81 @@
+package librarytest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import library.Book;
+import library.Library;
+import library.MapItem;
+import library.Newspaper;
+
+
+public class LibraryTest {
+
+	
+	private Library input = new Library();
+	private Book testBook;
+	private MapItem testMap;
+	private Newspaper testNewspaper;
+	
+		
+	@Test
+	public void addBookTest() {
+		System.out.print("[Test 1/x: addBookTest] ");
+		testBook = new Book(1155, false, "Reality is not what it seems", "Carlo Rovelli", "science");
+		System.out.println(testBook);
+		assertEquals("failed to add a book to the library", true, input.addItem(testBook));
+	}
+	
+	
+	@Test
+	public void addMapTest() {
+		System.out.print("[Test 2/x: addMapTest] ");
+		testMap = new MapItem(2324, false, "Manchester", "25:1");
+		System.out.println(testMap);
+		assertEquals("failed to add a Map to the library", true, input.addItem(testMap));
+	}
+	
+	@Test
+	public void addNewspaperTest() {
+		System.out.print("[Test 2/x: addNewspaper] ");
+		testNewspaper = new Newspaper(3536, false, "Daily Express", "Daily express editor man", "15th Jan 2018", "UK");
+		System.out.println(testNewspaper);
+		assertEquals("failed to add a Newspaper to the library", true, input.addItem(testNewspaper));
+	}
+	
+	
+	@Test
+	public void removeBookTest() {
+		System.out.print("[Test 1/x: removeBookTest] ");
+		testBook = new Book(1155, false, "Reality is not what it seems", "Carlo Rovelli", "science");
+		input.addItem(testBook);
+		System.out.println(testBook);
+		assertEquals("failed to remove a book from the library", testBook, testBook);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

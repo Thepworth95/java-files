@@ -1,0 +1,84 @@
+package library;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+
+	private List<LibraryItem> library = new ArrayList<LibraryItem>();
+
+	public Library() {
+		super();
+	}
+
+	public boolean addItem(LibraryItem item) {
+		return this.library.add(item);
+	}
+
+	public void removeItemByIndex(int number) {
+		for (LibraryItem i : library) {
+			if (i.getiD() == number) {
+				this.library.remove(i);
+				return;
+			}
+		}
+	}
+
+	public void checkIn(int number) {
+		for (LibraryItem i : library) {
+			if (i.getiD() == number) {
+				i.checkIn();
+			}
+		}
+	}
+	
+	public void checkOut(int number) {
+		for (LibraryItem i : library) {
+			if (i.getiD() == number) {
+				i.checkOut();
+			}
+		}
+	}
+	
+	public void editID(int number, int newNumber) {
+		for (LibraryItem i : library) {
+			if (i.getiD() == number) {
+				i.setiD(newNumber);
+			}
+		}
+	}
+	
+	public void editBookTitle(int number, String newTitle) {
+		for (LibraryItem i : library) {
+			if (i.getiD() == number) {
+				((Book) i).setTitle(newTitle);
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public void removeItemByType(Class<?> clazz) {
+		List<LibraryItem> toRemove = new ArrayList<LibraryItem>();
+		for (LibraryItem i : library) {
+			if (i.getClass() == clazz) {
+				toRemove.add(i);
+			}
+		}
+		library.removeAll(toRemove);
+	}
+
+	public void printItems() {
+		System.out.println("Items currently in Library: ");
+		for (LibraryItem i : library) {
+			System.out.println(i);
+		}
+	}
+
+}

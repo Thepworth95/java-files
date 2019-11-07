@@ -1,0 +1,10 @@
+package library;
+
+public class Map extends LibraryItem {
+
+	public Map(int iD) {
+		super(iD);
+		// TODO Auto-generated constructor stub
+	}
+
+}

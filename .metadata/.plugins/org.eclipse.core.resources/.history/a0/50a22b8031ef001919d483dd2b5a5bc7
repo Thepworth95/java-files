@@ -1,0 +1,14 @@
+package Maths;
+
+public class DivideWithExceptions {
+	public void divide(double x, double y) {
+		try {
+			System.out.println(x/y);
+		} catch (AIsBiggerThanB exception) {
+			System.out.println();
+		}
+		
+	}
+
+	
+}

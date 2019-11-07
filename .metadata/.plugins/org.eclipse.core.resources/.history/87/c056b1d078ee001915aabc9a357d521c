@@ -1,0 +1,25 @@
+package stringManipulation;
+
+public class Count {
+	public int count(String s) {
+		
+		int a = 0;
+		
+		for (int i = 1, i < s.length(), i++) {
+			s.substring(i-1,i);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		return s.length();
+
+	}
+
+}

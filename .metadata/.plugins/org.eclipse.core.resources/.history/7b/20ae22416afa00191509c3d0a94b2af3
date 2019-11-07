@@ -1,0 +1,108 @@
+package shopingWebsite;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+import org.junit.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ShopingProdjectTest {
+
+	WebDriver driver;
+
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Admin/Desktop/Drivers/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+
+	@Test
+	@Ignore
+	public void testDoDressesExist() {
+		driver.get("http://automationpractice.com/index.php");
+		WebElement searchFor = driver.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]"));
+		searchFor.sendKeys("dress");
+		searchFor.submit();
+		List<WebElement> wEs = driver.findElements(By.tagName("img"));
+		assertEquals("", false, wEs.isEmpty());
+	}
+
+	@Test
+	public void checkoutTest() throws InterruptedException {
+		driver.get("http://automationpractice.com/index.php");
+		WebElement searchFor = driver.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]"));
+		searchFor.sendKeys("dress");
+		searchFor.submit();
+		Thread.sleep(10000);
+		WebElement selectItem = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[2]/div/div[2]/h5/a"));
+		selectItem.click();
+		Thread.sleep(10000);
+		WebElement addToCart = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[4]/div/div/div/div[4]/form/div/div[3]/div/p/button"));
+		addToCart.click();
+		Thread.sleep(10000);
+		WebElement precedToCheckout1 = driver.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+		precedToCheckout1.click();
+		Thread.sleep(10000);
+		WebElement precedToCheckout2 = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/p[2]/a[1]/span"));
+		precedToCheckout2.click();
+		Thread.sleep(10000);
+		WebElement username = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/p[2]/a[1]/span"));
+		username.sendKeys("MeatPie@gmail.com");
+		Thread.sleep(10000);
+		WebElement password = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[2]/form/div/div[2]/span/input"));
+		password.sendKeys("password");
+		Thread.sleep(10000);
+		WebElement submit = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[2]/form/div/p[2]/button/span"));
+		submit.click();
+		Thread.sleep(10000);
+		
+		
+
+		
+/*		/html/body/div/div[2]/div/div[3]/div/div/div[2]/form/div/div[1]/input
+*/		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	@After
+	public void destroy() {
+		driver.close();
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

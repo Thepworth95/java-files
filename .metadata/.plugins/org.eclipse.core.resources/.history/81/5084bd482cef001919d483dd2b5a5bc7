@@ -1,0 +1,23 @@
+package Maths;
+
+public class App {
+	
+	public static void main(String[] args) {
+		Calculator calc = new Calculator();
+		calc.divide(2, 4);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
+	

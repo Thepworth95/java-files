@@ -1,0 +1,34 @@
+package Maths;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class App {
+
+	public static void main(String[] args) {
+		Calculator calc = new Calculator();
+		DivideWithExceptions div = new DivideWithExceptions();
+		calc.divide(2, 4);
+		
+		Scanner scan = new Scanner(System.in);
+		
+
+		double a = 0;
+		int x = 0;
+		int y = 0;
+		try {
+			x = scan.nextInt();
+			y = scan.nextInt();
+			System.out.println(div.divide(x, y));
+		} catch (InputMismatchException imx) {
+			System.out.println(div.divide((double) x, (double) y));
+		} catch (NumberFormatException exception) {
+			System.out.println();
+		} finally {
+			scan.close();
+		}
+
+	}
+
+}
+

@@ -1,0 +1,31 @@
+package librarytest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import library.Book;
+import library.Library;
+
+
+public class LibraryTest {
+
+	
+	private Library input = new Library();
+	private Book testBook;
+	
+		
+	@Test
+	public void addItemTest() {
+		
+		testBook = new Book(1155, false, "Reality is not what it seems", "Carlo Rovelli", "science");
+		assertEquals("failed to add a book to the library", "expected", input.addItem(testBook));
+	}
+	
+	
+	
+	
+	
+	
+}

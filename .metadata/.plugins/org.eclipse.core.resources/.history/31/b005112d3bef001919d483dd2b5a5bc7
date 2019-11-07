@@ -1,0 +1,10 @@
+package library;
+
+public class Book extends LibraryItem {
+
+	public Book(int iD) {
+		super(iD);
+		// TODO Auto-generated constructor stub
+	}
+
+}

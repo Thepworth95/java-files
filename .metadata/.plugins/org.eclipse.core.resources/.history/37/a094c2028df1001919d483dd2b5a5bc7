@@ -1,0 +1,15 @@
+package srthjsdhrsd;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Hcfactor {
+
+	
+	public int hcfactor(int a, int b) {
+		List<Integer> factors = new ArrayList<>;
+		return factors.stream().filter(i -> i % a = 0).filter(i -> i % b = 0).reduce(Math::max).get();
+	}
+	
+	
+}

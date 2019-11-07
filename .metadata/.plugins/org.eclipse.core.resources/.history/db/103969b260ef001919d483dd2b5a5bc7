@@ -1,0 +1,26 @@
+package library;
+
+public class LibraryApp {
+
+	public static void main(String[] args) {
+
+		Library lib = new Library();
+
+		lib.addItem(new Book(1155, false, "Reality is not what it seems", "Carlo Rovelli", "science"));
+		lib.addItem(new MapItem(2324, true, "Manchester", "25:1"));
+		lib.addItem(new Newspaper(3536, false, "Daily Express", "Daily express editor man", "15th Jan 2018", "UK"));
+		lib.addItem(new Newspaper(3516, false, "Daily Mail", "Daily Mail editor man", "22nd June 2013", "UK"));
+		lib.addItem(new Newspaper(3624, true,"The Sun" , "The Joker", "3rd december 2009", "UK"));
+		lib.addItem(new MapItem(2654, false, "Bristol", "50:1"));
+		lib.addItem(new Book(1984, false, "Harry Potter", "J.K. Rowling", "Fiction"));
+		lib.addItem(new Book(1623, false, "Lord of the rings", "J.R.R. Tolkin", "Fiction"));
+		lib.removeItemByIndex(2654);
+/*		lib.removeItemByType(MapItem.class);*/
+		lib.checkOut(3536);
+		lib.checkIn(3624);
+		
+
+		lib.printItems();
+	}
+
+}

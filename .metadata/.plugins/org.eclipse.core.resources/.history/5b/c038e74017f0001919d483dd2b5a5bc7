@@ -1,0 +1,20 @@
+package rps;
+
+import java.util.Random;
+
+public class ComputerAction {
+
+	public String computerAction() {
+		
+			Random randomAction = new Random();
+			int z = randomAction.nextInt(3);
+			if (z == 0) {
+				return "rock";
+			} else if (z == 1) {
+				return "paper";
+			} else {
+				return "scissors";
+			}
+	}
+
+}

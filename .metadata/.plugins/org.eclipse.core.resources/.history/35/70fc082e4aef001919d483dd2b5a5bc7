@@ -1,0 +1,25 @@
+package library;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+
+	private List<LibraryItem> library = new ArrayList<LibraryItem>();
+
+		public Library() {
+			super();
+		}
+		
+		public booliean additem(LibraryItem item) {
+			return this.LibraryItem.add(item);
+		}
+		
+		
+		
+		
+		
+		
+
+
+}

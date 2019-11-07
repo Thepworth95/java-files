@@ -1,0 +1,43 @@
+package library;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+
+	private List<LibraryItem> library = new ArrayList<LibraryItem>();
+
+	public Library() {
+		super();
+	}
+
+	public boolean addItem(LibraryItem item) {
+		return this.library.add(item);
+	}
+
+	public void removeItemByIndex(int number) {
+		for (LibraryItem i : library) {
+			if (i.getiD() == number) {
+				this.library.remove(i);
+			}
+		}
+	}
+
+	public void removeVehiclesByType(Class<?> clazz) {
+		List<LibraryItem> toRemove = new ArrayList<LibraryItem>();
+		for (LibraryItem i : library) {
+			if (i.getClass() == clazz) {
+				toRemove.add(i);
+			}
+		}
+		library.removeAll(toRemove);
+	}
+
+	public void printItems() {
+		System.out.println("Items currently in Library: ");
+		for (LibraryItem i : library) {
+			System.out.println(i);
+		}
+	}
+
+}

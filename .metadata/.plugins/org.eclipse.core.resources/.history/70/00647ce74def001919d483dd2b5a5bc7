@@ -1,0 +1,19 @@
+package library;
+
+public abstract class LibraryItem {
+	
+	private int iD;
+
+	public LibraryItem(int ID) {
+		super();
+		iD = ID;
+	}
+	
+	@Override
+	public String toString() {
+		return "Item [ID= " + iD + "]";
+	}
+
+
+
+}

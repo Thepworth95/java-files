@@ -1,0 +1,13 @@
+package rpsTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class RPSTest {
+
+	@Test
+	public void rockWinsTest() {
+	assertEquals("rock did not beat scisors", "rock wins", )
+	}
+}

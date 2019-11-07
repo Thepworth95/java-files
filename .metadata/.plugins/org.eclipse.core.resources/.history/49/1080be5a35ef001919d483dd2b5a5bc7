@@ -1,0 +1,14 @@
+package Maths;
+
+public class AIsBiggerThanB extends RuntimeException{
+
+	public AIsBiggerThanB(String message) {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1158272320432122211L;
+
+}

@@ -1,0 +1,20 @@
+package library;
+
+public class LibraryItem {
+
+	int ID;
+
+	public LibraryItem(int iD) {
+		super();
+		ID = iD;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+}

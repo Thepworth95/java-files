@@ -1,0 +1,9 @@
+package stringManipulation;
+
+public class Count {
+	public int count(String s) {
+		return length(s);
+
+	}
+
+}

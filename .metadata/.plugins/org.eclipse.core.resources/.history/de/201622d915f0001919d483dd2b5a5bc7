@@ -1,0 +1,13 @@
+package rps;
+
+import java.util.Scanner;
+
+public class Game {
+	
+	Scanner scan = new Scanner(System.in);
+
+	while (play == true) {
+		
+	}
+	scan.close();
+}

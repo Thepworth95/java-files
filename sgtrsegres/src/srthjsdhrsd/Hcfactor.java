@@ -1,0 +1,14 @@
+package srthjsdhrsd;
+
+
+import java.util.stream.IntStream;
+
+public class Hcfactor {
+
+	
+	public int hcfactor(int a, int b) {
+		return IntStream.range(1, Math.min(a, b)).filter(i -> a % i == 0).filter(i -> b % i == 0).reduce(Math::max).getAsInt();
+	}
+	
+	
+}

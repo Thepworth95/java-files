@@ -1,0 +1,15 @@
+package Maths;
+
+
+public class App {
+
+	public static void main(String[] args) throws AIsBiggerThanB {
+		Calculator calc = new Calculator();
+		DivideWithExceptions div = new DivideWithExceptions();
+		calc.divide(2, 4);
+		
+		div.divide(6, 8);
+	}
+
+}
+

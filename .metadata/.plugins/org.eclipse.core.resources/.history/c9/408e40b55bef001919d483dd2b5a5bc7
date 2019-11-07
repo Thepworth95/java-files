@@ -1,0 +1,7 @@
+package library;
+
+public interface CheckIn {
+
+	public abstract void checkIn();
+
+}

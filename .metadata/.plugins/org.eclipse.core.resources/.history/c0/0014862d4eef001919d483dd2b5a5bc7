@@ -1,0 +1,30 @@
+package library;
+
+public abstract class Newspaper extends LibraryItem {
+
+	private String Date;
+	private String Location;
+
+	public Newspaper(int iD, String date, String location) {
+		super(iD);
+		Date = date;
+		Location = location;
+	}
+
+	public String getDate() {
+		return Date;
+	}
+
+	public void setDate(String date) {
+		Date = date;
+	}
+
+	public String getLocation() {
+		return Location;
+	}
+
+	public void setLocation(String location) {
+		Location = location;
+	}
+
+}

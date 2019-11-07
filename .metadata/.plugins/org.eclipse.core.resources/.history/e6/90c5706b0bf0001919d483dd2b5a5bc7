@@ -1,0 +1,23 @@
+package rps;
+
+import java.util.Random;
+
+public class ComputerAction {
+
+	public String computerAction() {
+		
+
+			Random randomDirection = new Random();
+			int z = randomDirection.nextInt();
+			if (z == 0) {
+				return "rock";
+			} else if (z == 1) {
+				return "paper";
+			} else {
+				return "scissors";
+			}
+
+
+	}
+
+}

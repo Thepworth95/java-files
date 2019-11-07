@@ -1,0 +1,26 @@
+package librarytest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import library.Library;
+
+
+public class LibraryTest {
+
+	private Library input = new Library();
+		
+	@Test
+	public void testItemAdd() {
+		
+		assertEquals("item not added", , )
+		
+	}
+	
+	
+	
+	
+	
+	
+}

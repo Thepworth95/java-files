@@ -1,0 +1,47 @@
+package library;
+
+public class Book extends LibraryItem {
+
+	private String title;
+	private String auther;
+	private String type;
+
+
+
+	public Book(int iD, String title, String auther, String type) {
+		super(iD);
+		this.title = title;
+		this.auther = auther;
+		this.type = type;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [ID: " + iD + " Book name: " + title + " Auther: " + auther + " Type of book: " + type + "]";
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAuther() {
+		return auther;
+	}
+
+	public void setAuther(String auther) {
+		this.auther = auther;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+}

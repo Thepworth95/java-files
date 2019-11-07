@@ -1,0 +1,28 @@
+package Maths;
+
+import java.io.IOException;
+import java.util.InputMismatchException;
+
+public class App {
+
+	public static void main(String[] args) {
+		Calculator calc = new Calculator();
+		DivideWithExceptions div = new DivideWithExceptions();
+		calc.divide(2, 4);
+
+		double a = 0;
+		int x = 0;
+		int y = 0;
+		try {
+
+			a = div.divide(x, y);
+		} catch (InputMismatchException imx) {
+			a = div.divide((int) x, (int) y);
+		} catch (IOException ioe) {
+
+		} finally {
+			System.out.println(a);
+		}
+
+	}
+}

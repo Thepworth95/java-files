@@ -1,0 +1,26 @@
+package library;
+
+public class TheSun extends Newspaper {
+
+	private String editor;
+
+	public TheSun(int iD , boolean checkedOut, String date, String location, String editor) {
+		super(iD, checkedOut, date, location);
+		this.editor = editor;
+	}
+
+	@Override
+	public String toString() {
+		return "The Sun [ID: " + getiD() + " Checked Out" + isCheckedOut() + " Date: " + getDate() + " Location: " + getLocation() + " Editor: " + editor
+				+ "]";
+	}
+
+	public String getEditor() {
+		return editor;
+	}
+
+	public void setEditor(String editor) {
+		this.editor = editor;
+	}
+
+}

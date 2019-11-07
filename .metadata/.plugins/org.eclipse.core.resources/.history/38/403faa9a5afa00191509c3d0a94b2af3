@@ -1,0 +1,61 @@
+package paintName;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.List;
+
+import org.junit.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.*;
+
+
+public class PaintName {
+
+	WebDriver driver;
+
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Admin/Desktop/Drivers/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+
+	@Test
+	@Ignore
+	public void testDoDressesExist() {
+		Actions action = new Actions(driver);
+		driver.get("https://www.youidraw.com/apps/painter/");
+		
+
+	}
+
+	
+	@After
+	public void destroy() {
+		driver.close();
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

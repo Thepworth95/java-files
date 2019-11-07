@@ -1,0 +1,53 @@
+package theDemoSite;
+
+import static org.junit.Assert.*;
+
+import org.junit.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class TheDemoSiteTest {
+	
+	WebDriver driver;
+
+
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Admin/Desktop/drivers/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+	
+	@Test
+	public void test1() {
+		driver.get("http://thedemosite.co.uk/");
+		WebElement webEle = driver.findElement(By.xpath("/html/body/div/center/table/tbody/tr[2]/td/div/center/table/tbody/tr/td[2]/p/small/a[3]"));
+		webEle.click();
+		WebElement createuserame = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[1]/td[2]/p/input"));
+		createuserame.sendKeys("GoodTom");
+		WebElement createpassword = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[2]/td[2]/p/input"));
+		createpassword.sendKeys("notaweapon");
+		WebElement createsubmitdetails = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[3]/td[2]/p/input"));
+		createsubmitdetails.click();		
+		WebElement loginpage = driver.findElement(By.xpath("/html/body/div/center/table/tbody/tr[2]/td/div/center/table/tbody/tr/td[2]/p/small/a[4]"));
+		loginpage.click();
+		WebElement loginuserame = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[1]/td[2]/p/input"));
+		loginuserame.sendKeys("GoodTom");
+		WebElement loginpassword = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/p/input"));
+		loginpassword.sendKeys("notaweapon");
+		WebElement loginsubmitdetails = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[3]/td[2]/p/input"));
+		loginsubmitdetails.click();
+		assertEquals("", "**Successful Login**", driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote/font/center/b")).getText());
+	}
+		
+	
+	@After
+	public void teardown() {
+	driver.close();
+		
+	}
+
+}

@@ -1,0 +1,7 @@
+package stringManipulation;
+
+public class App {
+	Count lengthOfString = new Count();
+	
+	lengthOsString.count("This is a string");
+}

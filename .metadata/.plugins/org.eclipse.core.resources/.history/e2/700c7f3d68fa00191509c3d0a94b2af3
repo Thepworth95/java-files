@@ -1,0 +1,99 @@
+package shopingWebsite;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+import org.junit.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ShopingProdjectTest {
+
+	WebDriver driver;
+
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Admin/Desktop/Drivers/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+
+	@Test
+	@Ignore
+	public void testDoDressesExist() {
+		driver.get("http://automationpractice.com/index.php");
+		WebElement searchFor = driver.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]"));
+		searchFor.sendKeys("dress");
+		searchFor.submit();
+		List<WebElement> wEs = driver.findElements(By.tagName("img"));
+		assertEquals("", false, wEs.isEmpty());
+	}
+
+	@Test
+	public void checkoutTest() throws InterruptedException {
+		driver.get("http://automationpractice.com/index.php");
+		WebElement searchFor = driver.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]"));
+		searchFor.sendKeys("dress");
+		searchFor.submit();
+		WebElement selectItem = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[1]/div/div[2]/h5/a"));
+		selectItem.click();
+		WebElement addToCart = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[4]/div/div/div/div[4]/form/div/div[3]/div/p/button"));
+		addToCart.click();
+		
+		
+		
+		
+		
+		
+		Thread.sleep(10000);
+		
+		
+		
+		/*List<WebElement> wEs = driver.findElements(By.tagName("img"));*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	@After
+	public void destroy() {
+		driver.close();
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

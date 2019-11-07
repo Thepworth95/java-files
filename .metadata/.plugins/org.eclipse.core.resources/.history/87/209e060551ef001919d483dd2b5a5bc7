@@ -1,0 +1,15 @@
+package library;
+
+public class LibraryApp {
+
+	public static void main(String[] args) {
+
+		Library lib = new Library();
+
+		lib.addItem(new Book(320155, "Reality is not what it seems", "Carlo Rovelli", "science"));
+
+		lib.printItems();
+
+	}
+
+}

@@ -1,0 +1,48 @@
+package library;
+
+public class LibraryApp {
+
+	public static void main(String[] args) {
+
+		Library lib = new Library();
+		Person john = new Person("John", 64);
+		Person geoff = new Person("geoff", 44);
+		Person bill = new Person("bill", 35);
+		Person andy = new Person("andy", 21);
+		Person fred = new Person("fred", 18);
+		Person luke = new Person("luke", 68);
+		Person paul = new Person("paul", 62);
+		
+
+		lib.addItem(new Book(1155, false, "Reality is not what it seems", "Carlo Rovelli", "science"));
+		lib.addItem(new MapItem(2324, true, "Manchester", "25:1"));
+		lib.addItem(new Newspaper(3536, false, "Daily Express", "Daily express editor man", "15th Jan 2018", "UK"));
+		lib.addItem(new Newspaper(3516, false, "Daily Mail", "Daily Mail editor man", "22nd June 2013", "UK"));
+		lib.addItem(new Newspaper(3624, true,"The Sun" , "The Joker", "3rd december 2009", "UK"));
+		lib.addItem(new MapItem(2654, true, "Bristol", "50:1"));
+		lib.addItem(new Book(1984, false, "Harry Potter", "J.K. Rowling", "Fiction"));
+		lib.addItem(new Book(1623, false, "Lord of the rings", "J.R.R. Tolkin", "Fiction"));
+/*		lib.removeItemByIndex(2654);
+		lib.removeItemByType(MapItem.class);*/
+		lib.checkOut(3536);
+		lib.checkIn(3624);
+		lib.checkOut(1623);
+		lib.checkIn(2654);
+		lib.editBookTitle(1984, "Game of thrones");
+		lib.editBookType(1984, "stupid fiction");
+		lib.editBookAuther(1984, "stupd fat guy maybe named something martin");
+		lib.editMapLocation(2324, "Salford");
+		lib.editMapScale(2324, "1:500");
+		lib.editNewspaperDate(3536, "2nd october 1995");
+		lib.editNewspaperEditor(3536, "Boring guy");
+		lib.editNewspaperName(3536, "Financial times");
+		lib.editNewspaperLocation(3536, "UK");
+		
+		
+		
+		
+		
+		lib.printItems();
+	}
+
+}

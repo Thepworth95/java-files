@@ -1,0 +1,22 @@
+package rps;
+
+public class RPS {
+	
+	public String game(String playerAction) {
+		if (playerAction == "rock") {
+			
+		} else if (playerAction == "paper") {
+			
+			
+		} else {
+			
+			
+		}
+		
+		
+		
+		
+		return playerAction;
+	}
+
+}

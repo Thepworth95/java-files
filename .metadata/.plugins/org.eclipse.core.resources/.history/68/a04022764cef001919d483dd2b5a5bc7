@@ -1,0 +1,19 @@
+package librarytest;
+
+public class LibraryTest {
+
+	private Library input = new Library();
+		
+	@Test
+	public void testItemAdd() {
+		
+		assertEquals("item not added", , )
+		
+	}
+	
+	
+	
+	
+	
+	
+}

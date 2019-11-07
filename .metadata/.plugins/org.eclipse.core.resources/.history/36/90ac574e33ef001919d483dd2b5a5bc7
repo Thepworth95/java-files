@@ -1,0 +1,10 @@
+package Maths;
+
+public class AIsBiggerThanB extends Exception{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1158272320432122211L;
+
+}

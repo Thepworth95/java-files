@@ -1,0 +1,27 @@
+package library;
+
+public class DailyMail extends Newspaper {
+
+	private String editor;
+
+	public DailyMail(int iD, boolean checkedOut, String date, String location, String editor) {
+		super(iD, checkedOut, date, location);
+		this.editor = editor;
+	}
+
+	@Override
+	public String toString() {
+		return "Daily Mail [ID: " + getiD() + " Is it Checked out: " + isCheckedOut() + " Date: " + getDate() + " Location: " + getLocation() + " Editor: "
+				+ editor + "]";
+
+	}
+
+	public String getEditor() {
+		return editor;
+	}
+
+	public void setEditor(String editor) {
+		this.editor = editor;
+	}
+
+}

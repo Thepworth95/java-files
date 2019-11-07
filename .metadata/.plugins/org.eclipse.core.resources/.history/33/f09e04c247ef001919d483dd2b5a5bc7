@@ -1,0 +1,22 @@
+package library;
+
+public class DailyExpress extends Newspaper {
+	
+	private String editor;
+
+	public public DailyExpress(int iD, String date, String location, String editor) {
+		super(iD, date, location);
+		this.editor = editor;
+	}
+
+	public String getEditor() {
+		return editor;
+	}
+
+	public void setEditor(String editor) {
+		this.editor = editor;
+	}
+
+
+
+}
